@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: sample-spring-boot-micrometer
+  datasource:
+    url: jdbc:postgresql://db:5432/sample?charSet=UTF-8&amp;ApplicationName=${spring.application.name}
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    web:
+      server:
+        auto-time-requests: true
+  endpoint:
+    prometheus:
+      enabled: true

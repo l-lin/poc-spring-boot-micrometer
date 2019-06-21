@@ -1,0 +1,15 @@
+# top-most EditorConfig file
+root = true
+
+# 4 space indentation
+[*]
+end_of_line = lf
+indent_style = space
+indent_size = 4
+
+[{*.json,*.yml,*.yaml}]
+indent_style = space
+indent_size = 2
+
+[{*.xml, Makefile}]
+indent_style = tab
